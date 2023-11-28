@@ -1,2 +1,2 @@
-# EX mwhtml BACKUP
-### Dead ARG that i could start again on github (not sure)
+# MWhtml Hosting Project
+### Started as an ARG, now becoming an hosting project
