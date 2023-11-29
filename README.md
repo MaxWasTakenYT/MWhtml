@@ -1,2 +1,2 @@
-# [MWhtml Hosting Project](https://maxwastakenyt.github.io)
-### An open source file hosting site (not finished yet!)
+# What is MWhtml
+### MWhtml is an open source file hosting project (not finished yet!)
