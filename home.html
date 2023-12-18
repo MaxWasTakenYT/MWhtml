@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style> 
-        button { 
+        button, input[type="file"], input[type="submit"] { 
             height: 50px; 
             width: 200px;
             background-color: #dbdbdb;
             font-family: Trebuchet MS;
             border-radius: 15px;
+            margin-bottom: 10px;
         } 
         h1, h2, h3 {
             color: white;
@@ -28,7 +29,7 @@
         <h1>Not started yet!</h1> 
         <h3>(On the final version here you will be able to upload files and see them)</h3>
 
-        <form action="/scripts/php/upload.php" method="post" enctype="multipart/form-data">
+        <form action="upload.php" method="post" enctype="multipart/form-data">
             <input type="file" id="myFile" name="fileToUpload">
             <input type="submit" value="Upload File">
         </form>
