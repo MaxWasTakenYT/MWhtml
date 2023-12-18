@@ -23,6 +23,13 @@
     <link rel="icon" href="https://stable.mwhtml.rf.gd/images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="https://stable.mwhtml.rf.gd/images/favicon.ico" type="image/x-icon">
     <title>MWhtml - Home</title>
+    <script>
+        function showFileName() {
+            var inputFile = document.getElementById('myFile');
+            var fileNameDisplay = document.getElementById('fileNameDisplay');
+            fileNameDisplay.innerHTML = inputFile.files.length > 0 ? "File selected: " + inputFile.files[0].name : "";
+        }
+    </script>
 </head>
 <body>
     <center> 
@@ -30,7 +37,8 @@
         <h3>(On the final version here you will be able to upload files and see them)</h3>
 
         <form action="/scripts/upload.php" method="post" enctype="multipart/form-data">
-            <input type="file" id="myFile" name="fileToUpload">
+            <input type="file" id="myFile" name="fileToUpload" onchange="showFileName()">
+            <p id="fileNameDisplay"></p>
             <input type="submit" value="Upload File">
         </form>
         
