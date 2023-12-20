@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style> 
+        .centered {
+            text-align: center;
+        }
         button, input[type="file"], input[type="submit"] { 
             height: 50px; 
             width: 200px;
@@ -32,7 +35,7 @@
     </script>
 </head>
 <body>
-    <center> 
+    <div class="centered">
         <h1>Not started yet!</h1> 
         <h3>(On the final version here you will be able to upload files and see them)</h3>
         <form action="/scripts/upload.php" method="post" enctype="multipart/form-data">
@@ -40,11 +43,10 @@
             <p id="fileNameDisplay"></p>
             <input type="submit" value="Upload File">
         </form>
-            <button>Select file</button>
         
         <a href="https://github.com/MaxWasTakenYT/MWhtml">
             <button><strong>GitHub Repo</strong></button>
         </a>
-    </center>
+    </div>
 </body>
 </html>
