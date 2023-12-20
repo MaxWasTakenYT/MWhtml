@@ -7,14 +7,17 @@
         .centered {
             text-align: center;
         }
-        button, input[type="file"], input[type="submit"] { 
+        button, input[type="submit"] { 
             height: 50px; 
             width: 200px;
             background-color: #dbdbdb;
             font-family: Trebuchet MS;
             border-radius: 15px;
             margin-bottom: 10px;
-        } 
+        }
+        #myFile {
+            display: none;
+        }
         h1, h2, h3 {
             color: white;
             font-family: Trebuchet MS;
@@ -32,6 +35,10 @@
             var fileNameDisplay = document.getElementById('fileNameDisplay');
             fileNameDisplay.innerHTML = inputFile.files.length > 0 ? "File selected: " + inputFile.files[0].name : "";
         }
+
+        function triggerFileInput() {
+            document.getElementById('myFile').click();
+        }
     </script>
 </head>
 <body>
@@ -40,6 +47,7 @@
         <h3>(On the final version here you will be able to upload files and see them)</h3>
         <form action="/scripts/upload.php" method="post" enctype="multipart/form-data">
             <input type="file" id="myFile" name="fileToUpload" onchange="showFileName()">
+            <button type="button" onclick="triggerFileInput()">Select file</button>
             <p id="fileNameDisplay"></p>
             <input type="submit" value="Upload File">
         </form>
