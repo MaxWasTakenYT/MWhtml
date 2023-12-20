@@ -18,6 +18,9 @@
         #myFile {
             display: none;
         }
+        #submitBtn {
+            display: none;
+        }
         h1, h2, h3 {
             color: white;
             font-family: Trebuchet MS;
@@ -33,7 +36,14 @@
         function showFileName() {
             var inputFile = document.getElementById('myFile');
             var fileNameDisplay = document.getElementById('fileNameDisplay');
-            fileNameDisplay.innerHTML = inputFile.files.length > 0 ? "File selected: " + inputFile.files[0].name : "";
+            var submitButton = document.getElementById('submitBtn');
+            if (inputFile.files.length > 0) {
+                fileNameDisplay.innerHTML = "File selected: " + inputFile.files[0].name;
+                submitButton.style.display = 'block';
+            } else {
+                fileNameDisplay.innerHTML = "";
+                submitButton.style.display = 'none';
+            }
         }
 
         function triggerFileInput() {
@@ -49,7 +59,7 @@
             <input type="file" id="myFile" name="fileToUpload" onchange="showFileName()">
             <button type="button" onclick="triggerFileInput()">Select file</button>
             <p id="fileNameDisplay"></p>
-            <input type="submit" value="Upload File">
+            <input type="submit" id="submitBtn" value="Upload File">
         </form>
         
         <a href="https://github.com/MaxWasTakenYT/MWhtml">
